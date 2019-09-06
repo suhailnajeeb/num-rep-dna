@@ -168,15 +168,21 @@ P22 = [pairedNum22(s) for s in S]
 
 # DNA Walk
 
-def dnaWalk(s):
+def dnaWalk(s,x):
     if s == 'A':
-        return s - 1
+        return x - 1
     if s == 'C':
-        return s + 1
+        return x + 1
     if s == 'G':
-        return s + 1
+        return x - 1
     if s == 'T':
-        return s - 1
+        return x + 1
+
+x = 0
+D = []
+for s in S:
+    x = dnaWalk(s,x)
+    D.append(x)    
 
 # Z-curve
 

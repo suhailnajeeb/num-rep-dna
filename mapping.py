@@ -89,12 +89,31 @@ C = [complexM(s) for s in S]
 
 # Quarternion
 
+def quarter(s):
+    if s == 'A':
+        return (1,1,1)
+    if s == 'C':
+        return (1,-1,-1)
+    if s == 'G':
+        return (-1,-1,1)
+    if s == 'T':
+        return (-1,1,-1)
 
-
+Q = [quarter(s) for s in S]
 
 # EIIP
 
+def EIIP(s):
+    if s == 'A':
+        return 0.1260
+    if s == 'C':
+        return 0.1340
+    if s == 'G':
+        return 0.0806
+    if s == 'T':
+        return 0.1335
 
+E = [EIIP(s) for s in S]
 
 # Atomnic Number
 

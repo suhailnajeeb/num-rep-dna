@@ -186,5 +186,21 @@ for s in S:
 
 # Z-curve
 
+def zcurve(s,c,C,G,A,T):
+    if c == 'x':
+        x = (A + G) - (C + T)
+        return x
+    if c == 'y':
+        y = (A + C) - (G + T)
+        return y
+    if c == 'z':
+        z = (A + T) - (C + G)
+        return z
+
+def zMap(S):
+    xn =  [ zcurve(s,'x', voss(s,'C'), voss(s,'G'), voss(s,'A'), voss(s,'T')) for s in S ]
+    yn =  [ zcurve(s,'y', voss(s,'C'), voss(s,'G'), voss(s,'A'), voss(s,'T')) for s in S ]
+    zn =  [ zcurve(s,'z', voss(s,'C'), voss(s,'G'), voss(s,'A'), voss(s,'T')) for s in S ]
+    return xn, yn, zn
 
 

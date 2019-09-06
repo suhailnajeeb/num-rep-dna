@@ -46,11 +46,32 @@ def tetraMap(S):
 
 # Integer
 
+def intm(s):
+    if s == 'A':
+        return 2
+    if s == 'C':
+        return 1
+    if s == 'G':
+        return 3
+    if s == 'T':
+        return 0
+
+I = [intm(s) for s in S]
 
 
 # Real
 
+def real(s):
+    if s == 'A':
+        return -1.5
+    if s == 'C':
+        return 0.5
+    if s == 'G':
+        return -0.5
+    if s == 'T':
+        return 1.5
 
+R = [real(s) for s in S]
 
 # Complex
 

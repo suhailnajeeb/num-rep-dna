@@ -14,8 +14,6 @@ def vossMap(s):
 
 # Tetrahedron
 
-
-
 '''
 
 def tetra(C,G,A,T):

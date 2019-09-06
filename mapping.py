@@ -87,8 +87,8 @@ def complexM(s):
 
 C = [complexM(s) for s in S]
 
-
 # Quarternion
+
 
 
 

@@ -15,7 +15,7 @@ SEQUENCES_URL = 'https://raw.githubusercontent.com/abidlabs/deep-learning-genomi
 sequences = requests.get(SEQUENCES_URL).text.split('\n')
 sequences = list(filter(None, sequences))  # This removes empty sequences.
 
-n = 1000
+n = 1337
 sequence = sequences[n]
 
 print("Sequence no " + str(n) + ": " + sequence)
@@ -37,8 +37,8 @@ print(T)
 
 # STDFT
 
-
 import cmath
+import math
 
 def stdft(x, L = 50):
     X = []
@@ -48,17 +48,20 @@ def stdft(x, L = 50):
             S = S + x[n]*cmath.exp(-1j*2*math.pi/L*K*n)
         X.append(S)
     return X
-        
+
 Xc = stdft(C)
 Xa = stdft(A)
 Xt = stdft(T)
 Xg = stdft(G)
 
+
 P = []
+L = 50
+for k in range(L-1):
+    p = cmath.polar(Xc[k])[0]**2 + cmath.polar(Xg[k])[0]**2 + cmath.polar(Xa[k])[0]**2 + cmath.polar(Xt[k])[0]**2
+    P.append(p)
 
-for p in range
-
-a = 3 + 2j
-cmath.polar(a)[0]
-
+import matplotlib.pyplot as plt
+plt.plot(range(L-1), P)
+plt.show()
 

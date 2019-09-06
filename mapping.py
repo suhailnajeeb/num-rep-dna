@@ -168,7 +168,15 @@ P22 = [pairedNum22(s) for s in S]
 
 # DNA Walk
 
-
+def dnaWalk(s):
+    if s == 'A':
+        return s - 1
+    if s == 'C':
+        return s + 1
+    if s == 'G':
+        return s + 1
+    if s == 'T':
+        return s - 1
 
 # Z-curve
 

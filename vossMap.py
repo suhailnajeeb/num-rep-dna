@@ -34,3 +34,31 @@ print(A)
 
 print(" Xt : ") 
 print(T)
+
+# STDFT
+
+
+import cmath
+
+def stdft(x, L = 50):
+    X = []
+    for K in range(L-1):
+        S = 0
+        for n in range(L-1):
+            S = S + x[n]*cmath.exp(-1j*2*math.pi/L*K*n)
+        X.append(S)
+    return X
+        
+Xc = stdft(C)
+Xa = stdft(A)
+Xt = stdft(T)
+Xg = stdft(G)
+
+P = []
+
+for p in range
+
+a = 3 + 2j
+cmath.polar(a)[0]
+
+

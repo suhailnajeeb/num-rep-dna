@@ -75,6 +75,17 @@ R = [real(s) for s in S]
 
 # Complex
 
+def complexM(s):
+    if s == 'A':
+        return 1+1j
+    if s == 'C':
+        return -1+1j
+    if s == 'G':
+        return -1-1j
+    if s == 'T':
+        return 1-1j
+
+C = [complexM(s) for s in S]
 
 
 # Quarternion

@@ -117,11 +117,54 @@ E = [EIIP(s) for s in S]
 
 # Atomnic Number
 
+def atomic(s):
+    if s == 'A':
+        return 70
+    if s == 'C':
+        return 58
+    if s == 'G':
+        return 78
+    if s == 'T':
+        return 66
 
+A = [atomic(s) for s in S]
 
 # Paired Numeric
 
+def pairedNum1(s):
+    if s == 'A':
+        return 1
+    if s == 'C':
+        return -1
+    if s == 'G':
+        return -1
+    if s == 'T':
+        return 1
 
+P1 = [pairedNum1(s) for s in S]
+
+def pairedNum21(s):
+    if s == 'A':
+        return 0
+    if s == 'C':
+        return -1
+    if s == 'G':
+        return -1
+    if s == 'T':
+        return 0
+
+def pairedNum22(s):
+    if s == 'A':
+        return 1
+    if s == 'C':
+        return 0
+    if s == 'G':
+        return 0
+    if s == 'T':
+        return 1
+
+P21 = [pairedNum21(s) for s in S]
+P22 = [pairedNum22(s) for s in S]
 
 # DNA Walk
 
